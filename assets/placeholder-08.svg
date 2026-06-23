@@ -1,0 +1,10 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#111114"/>
+  <circle cx="400" cy="280" r="180" fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.25"/>
+  <circle cx="400" cy="280" r="120" fill="none" stroke="#FF2D55" stroke-width="1" opacity="0.2"/>
+  <circle cx="400" cy="280" r="60" fill="none" stroke="#FFCC00" stroke-width="1.5" opacity="0.35"/>
+  <circle cx="300" cy="220" r="15" fill="#FF2D55" opacity="0.3"/>
+  <circle cx="500" cy="340" r="10" fill="#00D4FF" opacity="0.3"/>
+  <circle cx="480" cy="200" r="8" fill="#FFCC00" opacity="0.3"/>
+  <text x="400" y="580" text-anchor="middle" fill="#EDEAF0" font-family="sans-serif" font-size="20" opacity="0.5">Cosmic Series — Digital Illustrations</text>
+</svg>

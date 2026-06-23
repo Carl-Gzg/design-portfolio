@@ -1,0 +1,5 @@
+﻿# Diagnostic screenshots
+diag-*.png
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,10 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#111114"/>
+  <rect x="60" y="80" width="200" height="200" rx="8" fill="none" stroke="#FF2D55" stroke-width="2" opacity="0.3"/>
+  <rect x="300" y="100" width="200" height="160" rx="8" fill="none" stroke="#FFCC00" stroke-width="2" opacity="0.25"/>
+  <rect x="540" y="80" width="200" height="200" rx="8" fill="none" stroke="#00D4FF" stroke-width="2" opacity="0.2"/>
+  <rect x="60" y="320" width="200" height="200" rx="8" fill="none" stroke="#00D4FF" stroke-width="2" opacity="0.2"/>
+  <rect x="300" y="300" width="200" height="160" rx="8" fill="none" stroke="#FF2D55" stroke-width="2" opacity="0.25"/>
+  <rect x="540" y="320" width="200" height="200" rx="8" fill="none" stroke="#FFCC00" stroke-width="2" opacity="0.3"/>
+  <text x="400" y="580" text-anchor="middle" fill="#EDEAF0" font-family="sans-serif" font-size="20" opacity="0.5">Artisan Coffee Collection — Packaging Design</text>
+</svg>
