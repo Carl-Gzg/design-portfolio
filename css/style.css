@@ -358,14 +358,16 @@ button {
   overflow: hidden;
 }
 
-.bento-thumb img {
+.bento-thumb img,
+.bento-thumb video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s var(--ease-out);
 }
 
-.bento-item:hover .bento-thumb img {
+.bento-item:hover .bento-thumb img,
+.bento-item:hover .bento-thumb video {
   transform: scale(1.05);
 }
 
