@@ -314,8 +314,12 @@ button {
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px 200px 200px;
+  grid-template-areas:
+    "longxi longxi junlin    shizhuang"
+    "longxi longxi gudian    shizhuang"
+    "xibu    xibu   saiche    saiche";
   gap: clamp(12px, 1.5vw, 20px);
-  grid-auto-rows: 200px;
 }
 
 /* Bento item sizing */
@@ -335,18 +339,18 @@ button {
   box-shadow: 0 12px 40px rgba(255, 45, 85, 0.12);
 }
 
-.bento-item.featured {
-  grid-column: span 2;
-  grid-row: span 2;
-}
+/* Grid area assignments */
+.bento-item.area-longxi    { grid-area: longxi; }
+.bento-item.area-junlin    { grid-area: junlin; }
+.bento-item.area-shizhuang { grid-area: shizhuang; }
+.bento-item.area-gudian    { grid-area: gudian; }
+.bento-item.area-xibu      { grid-area: xibu; }
+.bento-item.area-saiche    { grid-area: saiche; }
 
-.bento-item.wide {
-  grid-column: span 2;
-}
-
-.bento-item.tall {
-  grid-row: span 2;
-}
+/* Legacy span fallbacks (overridden by grid-area when active) */
+.bento-item.featured { grid-column: span 2; grid-row: span 2; }
+.bento-item.wide     { grid-column: span 2; }
+.bento-item.tall     { grid-row: span 2; }
 
 /* Bento thumbnail */
 .bento-thumb {
@@ -798,7 +802,11 @@ button {
 @media (max-width: 1199px) {
   .bento-grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 180px;
+    grid-template-rows: 180px 180px 180px;
+    grid-template-areas:
+      "longxi longxi junlin"
+      "longxi longxi shizhuang"
+      "gudian xibu   saiche";
   }
   
   .hero-decoration {
@@ -809,7 +817,13 @@ button {
 @media (max-width: 899px) {
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 160px;
+    grid-template-rows: 160px 160px 160px 160px 160px;
+    grid-template-areas:
+      "longxi longxi"
+      "longxi longxi"
+      "junlin shizhuang"
+      "gudian xibu"
+      "saiche saiche";
   }
   
   .bento-item.featured {
@@ -837,7 +851,18 @@ button {
 @media (max-width: 599px) {
   .bento-grid {
     grid-template-columns: 1fr;
-    grid-auto-rows: 200px;
+    grid-template-rows: auto;
+    grid-template-areas: none;
+    grid-auto-rows: 220px;
+  }
+  
+  .bento-item.area-longxi,
+  .bento-item.area-junlin,
+  .bento-item.area-shizhuang,
+  .bento-item.area-gudian,
+  .bento-item.area-xibu,
+  .bento-item.area-saiche {
+    grid-area: auto;
   }
   
   .bento-item.featured,
