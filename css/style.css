@@ -314,11 +314,13 @@ button {
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px 200px 200px;
   grid-template-areas:
-    "longxi longxi junlin    shizhuang"
-    "longxi longxi gudian    shizhuang"
-    "xibu    xibu   saiche    saiche";
+    "longxi      longxi      shizhuang    shizhuanghua"
+    "longxi      longxi      shizhuang    shizhuanghua"
+    "junlin      gudian      landao       xingqishi"
+    "xibu        xibu        saiche       saiche"
+    "xibu        xibu        saiche       saiche";
   gap: clamp(12px, 1.5vw, 20px);
 }
 
@@ -339,13 +341,16 @@ button {
   box-shadow: 0 12px 40px rgba(255, 45, 85, 0.12);
 }
 
-/* Grid area assignments */
-.bento-item.area-longxi    { grid-area: longxi; }
-.bento-item.area-junlin    { grid-area: junlin; }
-.bento-item.area-shizhuang { grid-area: shizhuang; }
-.bento-item.area-gudian    { grid-area: gudian; }
-.bento-item.area-xibu      { grid-area: xibu; }
-.bento-item.area-saiche    { grid-area: saiche; }
+/* Grid area assignments (9 works) */
+.bento-item.area-longxi      { grid-area: longxi; }
+.bento-item.area-junlin      { grid-area: junlin; }
+.bento-item.area-shizhuang   { grid-area: shizhuang; }
+.bento-item.area-shizhuanghua { grid-area: shizhuanghua; }
+.bento-item.area-landao      { grid-area: landao; }
+.bento-item.area-xingqishi   { grid-area: xingqishi; }
+.bento-item.area-gudian      { grid-area: gudian; }
+.bento-item.area-xibu        { grid-area: xibu; }
+.bento-item.area-saiche      { grid-area: saiche; }
 
 /* Legacy span fallbacks (overridden by grid-area when active) */
 .bento-item.featured { grid-column: span 2; grid-row: span 2; }
@@ -802,11 +807,14 @@ button {
 @media (max-width: 1199px) {
   .bento-grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 180px 180px 180px;
+    grid-template-rows: 180px 180px 180px 180px 180px 180px;
     grid-template-areas:
-      "longxi longxi junlin"
-      "longxi longxi shizhuang"
-      "gudian xibu   saiche";
+      "longxi     longxi     junlin"
+      "longxi     longxi     shizhuang"
+      "gudian     landao     xingqishi"
+      "shizhuanghua shizhuanghua ."
+      "xibu       saiche     saiche"
+      "xibu       saiche     saiche";
   }
   
   .hero-decoration {
@@ -817,13 +825,16 @@ button {
 @media (max-width: 899px) {
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 160px 160px 160px 160px 160px;
+    grid-template-rows: 160px 160px 160px 160px 160px 160px 160px 160px;
     grid-template-areas:
-      "longxi longxi"
-      "longxi longxi"
-      "junlin shizhuang"
-      "gudian xibu"
-      "saiche saiche";
+      "longxi     longxi"
+      "longxi     longxi"
+      "junlin     shizhuang"
+      "gudian     landao"
+      "xingqishi  shizhuanghua"
+      "xibu       xibu"
+      "saiche     saiche"
+      "saiche     saiche";
   }
   
   .bento-item.featured {
@@ -859,7 +870,10 @@ button {
   .bento-item.area-longxi,
   .bento-item.area-junlin,
   .bento-item.area-shizhuang,
+  .bento-item.area-shizhuanghua,
   .bento-item.area-gudian,
+  .bento-item.area-landao,
+  .bento-item.area-xingqishi,
   .bento-item.area-xibu,
   .bento-item.area-saiche {
     grid-area: auto;
