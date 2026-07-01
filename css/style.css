@@ -318,7 +318,7 @@ button {
   grid-template-areas:
     "longxi      longxi      shizhuang    shizhuanghua"
     "longxi      longxi      shizhuang    shizhuanghua"
-    "junlin      gudian      landao       xingqishi"
+    "junlin      gudian      landao       ."
     "xibu        xibu        saiche       saiche"
     "xibu        xibu        saiche       saiche";
   gap: clamp(12px, 1.5vw, 20px);
@@ -347,7 +347,6 @@ button {
 .bento-item.area-shizhuang   { grid-area: shizhuang; }
 .bento-item.area-shizhuanghua { grid-area: shizhuanghua; }
 .bento-item.area-landao      { grid-area: landao; }
-.bento-item.area-xingqishi   { grid-area: xingqishi; }
 .bento-item.area-gudian      { grid-area: gudian; }
 .bento-item.area-xibu        { grid-area: xibu; }
 .bento-item.area-saiche      { grid-area: saiche; }
@@ -811,7 +810,7 @@ button {
     grid-template-areas:
       "longxi     longxi     junlin"
       "longxi     longxi     shizhuang"
-      "gudian     landao     xingqishi"
+      "gudian     landao     ."
       "shizhuanghua shizhuanghua ."
       "xibu       saiche     saiche"
       "xibu       saiche     saiche";
@@ -831,7 +830,7 @@ button {
       "longxi     longxi"
       "junlin     shizhuang"
       "gudian     landao"
-      "xingqishi  shizhuanghua"
+      ".          shizhuanghua"
       "xibu       xibu"
       "saiche     saiche"
       "saiche     saiche";
@@ -873,7 +872,6 @@ button {
   .bento-item.area-shizhuanghua,
   .bento-item.area-gudian,
   .bento-item.area-landao,
-  .bento-item.area-xingqishi,
   .bento-item.area-xibu,
   .bento-item.area-saiche {
     grid-area: auto;
